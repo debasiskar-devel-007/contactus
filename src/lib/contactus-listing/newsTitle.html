@@ -1,0 +1,40 @@
+<form class="example-container" [formGroup]="newsTitleForm" (ngSubmit)="newsTitleFormSubmit()" novalidate>
+
+
+
+
+    <!--Name field start here-->
+    <mat-form-field>
+        <input matInput placeholder="Name " formControlName="fullname"
+            (blur)="inputUntouched('fullname')">
+        <mat-error *ngIf="!newsTitleForm.controls['fullname'].valid && newsTitleForm.controls['fullname'].errors.required && newsTitleForm.controls['fullname'].touched">
+            Name field can not be blank</mat-error>
+    </mat-form-field>
+
+     <!--Phone field start here-->
+     <mat-form-field>
+        <input matInput placeholder="Phone " formControlName="phone"
+            (blur)="inputUntouched('phone')">
+        <mat-error *ngIf="!newsTitleForm.controls['phone'].valid && newsTitleForm.controls['phone'].errors.required && newsTitleForm.controls['phone'].touched">
+            Phone field can not be blank</mat-error>
+    </mat-form-field>
+
+    <!-- Email field start here-->
+ <mat-form-field >
+    <input matInput placeholder="Email " formControlName="email" (blur)="inputUntouched('email')">
+    <mat-error  *ngIf="!newsTitleForm.controls['email'].valid && !newsTitleForm.controls['email'].errors.required">Email is not valid</mat-error>
+    <mat-error *ngIf="!newsTitleForm.controls['email'].valid && newsTitleForm.controls['email'].errors.required">Email field can not be blank</mat-error>
+  </mat-form-field>
+
+     <!--Company field start here-->
+     <mat-form-field>
+        <input matInput placeholder="Company " formControlName="company"
+            (blur)="inputUntouched('company')">
+        <mat-error *ngIf="!newsTitleForm.controls['company'].valid && newsTitleForm.controls['company'].errors.required && newsTitleForm.controls['company'].touched">
+            Full Name field can not be blank</mat-error>
+    </mat-form-field>
+
+
+    <button mat-raised-button color="primary">Submit</button>
+
+</form>

@@ -1,0 +1,40 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .fromClass {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.agm-map {
+  height: 300px;
+}
+
+.form-mat-card {
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+.title {
+  padding: 10px;
+  text-align: center;
+  background-color: blue;
+  color: aliceblue;
+}
